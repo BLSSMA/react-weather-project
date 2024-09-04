@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "./Weather.css";
+import FormatDate from "./FormatDate"
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 
@@ -16,6 +17,7 @@ wind: response.data.wind.speed,
 humidity: response.data.temperature.humidity,
 feelsLike: response.data.temperature.feels_like,
 icon: response.data.condition.icon_url,
+date: new Date(response.data.time *1000),
 })  ;      
         }
     if (weatherData.ready){
@@ -27,6 +29,7 @@ icon: response.data.condition.icon_url,
                 <input className="search auto-focus" type="search" placeholder="enter a city"/>
                 <input className="submit" type="submit" value="Search" />
             </form>
+<FormatDate date={weatherData.date} />
             <div className="cityTitle">{weatherData.city}</div>
             <img src={weatherData.icon} alt={weatherData.description} />
                 <div className="row currentStats">
