@@ -1,5 +1,6 @@
-.App {
+.App {  
   text-align: center;
+background-image: linear-gradient(to bottom, #a4562e, #bf712a, #d59023, #e4b218, #ebd712);
 }
 
 .App-logo {
@@ -35,4 +36,7 @@
   to {
     transform: rotate(360deg);
   }
+}
+.footer a{
+  color:rgb(71, 139, 7);
 }
