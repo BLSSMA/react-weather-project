@@ -1,39 +1,22 @@
 
-.cityTitle{
-    padding-top:30px;
-    font-size:42px;
-    text-transform: capitalize;
-    font-weight:800;
-    color:white;
-    letter-spacing: 5px;
-}
+
 .search{
     margin:70px 20px 0 0;
     border-radius:8px;
-    padding:10px 60px;
+    padding:10px 60px 10px 10px;
+    color: rgba(0, 0, 0, 0.542);
 }
 .submit{
     padding:10px 20px;
     border-radius:8px;
     background-color:rgb(252, 197, 58);
 }
-.currentStats, .forecast{
+.forecast{
     background-color: rgba(255, 255, 255, 0.837);
     border-radius: 10px;
     max-width: 600px;
     margin:20px auto;
     padding:10px 50px 10px 0;
-}
-.currentStatsTemp{
-    font-size: 86px;
-    font-weight: 700;
-    padding:0 0 0 20px;
-}
-.currentUnit{
-    position:relative;
-    top:-40px;
-    margin: 0 10px;
-    font-size: 25px;
 }
 
  .currentStatsWind, .currentStatsHumidity, .currentStatsPrecipitation{
@@ -44,19 +27,13 @@ text-align: start;
 font-size: 18px;
 line-height: 2;
 }
- .currentStatsWind strong,
- .currentStatsHumidity strong,
- .currentStatsPrecipitation strong,
+
  .forecastHigh{
 color:rgb(71, 139, 7);
 text-align: center;
  }
 
- .currentStatsDescription{
-  position: relative;
-  left:5px;
-  padding-top:0;
- }
+ 
 
 .forecast ul{
  list-style-type:none;
