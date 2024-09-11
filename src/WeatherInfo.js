@@ -1,6 +1,7 @@
 import React from "react";
 import "./WeatherInfo.css";
 import FormatDate from "./FormatDate";
+import WeatherIcon from "./WeatherIcon"
 import "bootstrap/dist/css/bootstrap.css";
 
 
@@ -11,7 +12,8 @@ export default function WeatherInfo(props){
         <div className="WeatherInfo">
            <FormatDate date={props.data.date} />
             <div className="cityTitle">{props.data.city}</div>
-            <img src={props.data.icon} alt={props.data.description} />
+            <WeatherIcon code={props.data.iconUrl} />
+            
                 <div className="row currentStats">
                 <div className="currentStatsTempDescr col-4">
                     <span className="currentStatsTemp">{Math.round(props.data.temperature)}</span>
