@@ -5,6 +5,7 @@ import ReactAnimatedWeather from "react-animated-weather";
 
 export default function WeatherIcon(props){
 const defaults = {
+    icon:"CLEAR_DAY",
 size:200,
   color: 'moccasin',
   animate: true

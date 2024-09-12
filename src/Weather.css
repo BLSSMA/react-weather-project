@@ -29,38 +29,3 @@ font-size: 18px;
 line-height: 2;
 }
 
- .forecastHigh{
-color:rgb(71, 139, 7);
-text-align: center;
- }
-
- 
-
-.forecast ul{
- list-style-type:none;
-}
-.forecastDay{
-    font-size: 20px;
-    color: rgba(0, 0, 0, 0.542);
-    font-weight: 450;
-}
-.forecast span{
-    padding:20px 38px;
-    text-align: left;
-}
-.forecast .row{
-    padding-bottom:20px;
-   
-}
-.forecastHigh{
-    font-weight: 600;
-}
-.forecastIcon, .forecastDay, .forecastHigh, .forecastLow{
-display:grid;
-column-gap: 30px;
-}
-hr{
-        color: rgba(0, 0, 0, 0.163);
-        padding:0;
-        margin:0;
-}

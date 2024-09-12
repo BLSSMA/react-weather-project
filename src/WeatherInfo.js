@@ -26,18 +26,7 @@ export default function WeatherInfo(props){
 
 
             </div>
-            <div className="forecast">
-                <ul>
-                    <li><div className="row"><span><img src="#" alt="" className="forecastIcon col-4 img-fluid"/></span><span className="forecastDay col-4">Tuesday</span><span className="forecastHigh col-4">23℃</span><span className="forecastLow col-4">13℃</span></div></li>
-                   <hr />
-                    <li><div className="row"><span><img src="#" alt="" className="forecastIcon col-4"/></span><span className="forecastDay col-4">Wednesday</span><span className="forecastHigh col-4">23℃</span><span className="forecastLow col-4">13℃</span></div></li>
-                    <hr />
-                    <li><div className="row"><span><img src="#" alt="" className="forecastIcon col-4"/></span><span className="forecastDay col-4">Thursday</span><span className="forecastHigh col-4">23℃</span><span className="forecastLow col-4">13℃</span></div></li>
-                    <hr />
-                    <li><div className="row"><span><img src="#" alt="" className="forecastIcon col-4"/></span><span className="forecastDay col-4">Friday</span><span className="forecastHigh col-4">23℃</span><span className="forecastLow col-4">13℃</span></div></li>
-                </ul>
-
-</div>
+            
         </div>
         </div>
     );
