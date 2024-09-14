@@ -29,13 +29,6 @@
      font-weight: 600;
  }
 
- .forecastIcon,
- .forecastDay,
- .forecastHigh,
- .forecastLow {
-     display: grid;
-    justify-content: space-between;
- }
 
  hr {
      color: rgba(0, 0, 0, 0.163);

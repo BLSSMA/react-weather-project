@@ -1,45 +1,25 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import "./WeatherForecast.css";
+import "bootstrap/dist/css/bootstrap.css";
 
-export default function WeatherForecast(props){
+
+
+export default function WeatherForecast(){
 
     return(<div className="forecast">
                 <ul>
                     <li>
                         <div className="row">
-                        <span>
-                            <div className="forecastIcon col-3"><WeatherIcon code={props.icon} /></div>
-                            </span>
-                            <span className="forecastDay col-3">Tuesday</span>
-                            <span className="forecastHigh col-3">23℃</span>
-                            <span className="forecastLow col-3">13℃</span>
+                            <span className="forecastIcon d-flex-grid col-3 space-evenly">
+                                <WeatherIcon code="snow-day" size={40} color="black"/>
+                                </span>
+                            <span className="forecastDay d-flex-grid col-3 space-evenly">Tuesday</span>
+                            <span className="forecastHigh d-flex-grid col-3 space-evenly">23℃</span>
+                            <span className="forecastLow d-flex-grid col-3 space-evenly">13℃</span>
                             </div>
                             </li>
                    <hr />
-                    <li>
-                        <div className="row">
-                            <span><img src="#" alt="" className="forecastIcon col-4"/></span>
-                            <span className="forecastDay col-4">Wednesday</span>
-                            <span className="forecastHigh col-4">23℃</span>
-                            <span className="forecastLow col-4">13℃</span>
-                            </div>
-                            </li>
-                    <hr />
-                    <li><div className="row"><span><img src="#" alt="" className="forecastIcon col-4"/></span>
-                    <span className="forecastDay col-4">Thursday</span>
-                    <span className="forecastHigh col-4">23℃</span>
-                    <span className="forecastLow col-4">13℃</span>
-                    </div>
-                    </li>
-                    <hr />
-                    <li><div className="row"><span><img src="#" alt="" className="forecastIcon col-4"/></span>
-                    <span className="forecastDay col-4">Friday</span>
-                    <span className="forecastHigh col-4">23℃</span>
-                    <span className="forecastLow col-4">13℃</span>
-                    </div>
-                    </li>
                 </ul>
-
 </div>);
 }
