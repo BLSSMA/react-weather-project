@@ -20,7 +20,7 @@ export default function WeatherInfo(props){
                                     < WeatherUnit celsius={props.data.temperature}/>
 <div className="currentStatsDescription">{props.data.description}</div>
                     </div>
-             <div className="currentStatsPrecipitation col-3">Feels Like: <strong>{props.data.feelsLike}%</strong></div>
+             <div className="currentStatsPrecipitation col-3">Feels Like: <br/><strong>{Math.round(props.data.feelsLike)}℃</strong></div>
                 <div className="currentStatsWind col-3"><div>wind </div><strong>{props.data.wind}km/h</strong></div>
                 <div className="currentStatsHumidity col-2">humidity <strong>{props.data.humidity}%</strong></div>
 

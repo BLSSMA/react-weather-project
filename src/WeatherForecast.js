@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import WeatherIcon from "./WeatherIcon";
 import "./WeatherForecast.css";
+import ForecastDateFormat from "./ForecastDateFormat";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -15,6 +16,7 @@ let [forecast, setDailyForecast] = useState(null);
         setLoaded(true);
     }
     if (loaded){
+        console.log(forecast);
         return(<div className="forecast">
                 <ul>
                     <li>
@@ -22,7 +24,7 @@ let [forecast, setDailyForecast] = useState(null);
                             <span className="forecastIcon d-flex-grid col-3 space-evenly">
                                 <WeatherIcon code={forecast[0].condition.icon} size={40} color="black"/>
                                 </span>
-                            <span className="forecastDay d-flex-grid col-3 space-evenly">Tuesday</span>
+                            <span className="forecastDay d-flex-grid col-3 space-evenly">{<ForecastDateFormat/>*1000}</span>
                             <span className="forecastHigh d-flex-grid col-3 space-evenly">{Math.round(forecast[0].temperature.maximum)}℃</span>
                             <span className="forecastLow d-flex-grid col-3 space-evenly">{Math.round(forecast[0].temperature.minimum)}℃</span>
                             </div>
