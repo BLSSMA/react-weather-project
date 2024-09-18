@@ -1,7 +1,6 @@
-import React, {useState} from "react";
-import WeatherIcon from "./WeatherIcon";
+import React, {useState, useEffect } from "react";
+import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeatherForecast.css";
-import ForecastDateFormat from "./ForecastDateFormat";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -11,27 +10,37 @@ export default function WeatherForecast(props){
 let [loaded, setLoaded] = useState(false);
 let [forecast, setDailyForecast] = useState(null);
 
+useEffect(() => {
+    setLoaded(false);
+     },[props.coordinates]);
+   
+
+
     function handleResponse(response){
         setDailyForecast(response.data.daily);
         setLoaded(true);
+      
     }
     if (loaded){
-        console.log(forecast);
-        return(<div className="forecast">
+       
+        return(
+        <div className="forecast">
+            {forecast.map(function(dailyForecast, index){
+                if (index <6){
+                return( 
+                    <div key={index}>
                 <ul>
                     <li>
-                        <div className="row">
-                            <span className="forecastIcon d-flex-grid col-3 space-evenly">
-                                <WeatherIcon code={forecast[0].condition.icon} size={40} color="black"/>
-                                </span>
-                            <span className="forecastDay d-flex-grid col-3 space-evenly"><ForecastDateFormat data={forecast[0].time}/></span>
-                            <span className="forecastHigh d-flex-grid col-3 space-evenly">{Math.round(forecast[0].temperature.maximum)}℃</span>
-                            <span className="forecastLow d-flex-grid col-3 space-evenly">{Math.round(forecast[0].temperature.minimum)}℃</span>
-                            </div>
-                            </li>
-                   <hr />
-                </ul>
-</div>);
+                        <WeatherForecastDay data={dailyForecast}/> 
+                    </li>
+                        <hr />
+                </ul>    
+                </div> );
+            }else{
+                return null;
+            }})}
+               
+   </div>);
 }else{    
     let key = `01dd2bca25c0t00b3d253f443e0of791`;
     let latitude = props.coordinates.latitude;
