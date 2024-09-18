@@ -3,8 +3,6 @@
      text-align: center;
  }
 
-
-
  .forecast ul {
      list-style-type: none;
  }
@@ -28,7 +26,6 @@
  .forecastHigh {
      font-weight: 600;
  }
-
 
  hr {
      color: rgba(0, 0, 0, 0.163);
